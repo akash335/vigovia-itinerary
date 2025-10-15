@@ -18,29 +18,23 @@ const PAGE_PX    = { W: Math.round(PX_PER_MM * PAGE_MM.W),
                      H: Math.round(PX_PER_MM * PAGE_MM.H) };
 
 const defaultState = {
-  brandName: "VIGOVIA",
-  tripTitle: "Bali – 6 Days / 5 Nights",
-  travelers: "Akash & Friends",
-  dateRange: "12–17 Nov 2025",
-  contact: { phone: "+91 90000 12345", email: "hello@vigovia.com", website: "vigovia.example" },
-  highlights: ["Sunrise at Mount Batur", "Ubud Rice Terraces", "Snorkeling in Nusa Penida"],
+  brandName: "",
+  tripTitle: "",
+  travelers: "",
+  dateRange: "",
+  contact: { phone: "", email: "", website: "" },
+  highlights: [""],            // start with one empty highlight input
   days: [
-    { title: "Day 1 • Arrival & Uluwatu",
+    {
+      title: "",
       items: [
-        { time: "10:30", what: "Arrive at DPS (Denpasar)", where: "Airport", note: "Private transfer included" },
-        { time: "14:00", what: "Check-in & rest", where: "Hotel in Jimbaran", note: "Welcome drink" },
-        { time: "17:30", what: "Uluwatu Temple & Kecak", where: "Uluwatu", note: "Cliff sunset show" },
-      ]},
-    { title: "Day 2 • Ubud Classic",
-      items: [
-        { time: "08:00", what: "Tegallalang Rice Terraces", where: "Ubud", note: "Swing (optional)" },
-        { time: "11:00", what: "Tirta Empul Temple", where: "Manukaya", note: "Purification ritual" },
-        { time: "15:00", what: "Ubud Market & Palace", where: "Ubud", note: "Free time" },
-      ]},
+        { time: "", what: "", where: "", note: "" },  // one empty row to start
+      ],
+    },
   ],
-  footerNotes:
-    "All transfers by private AC vehicle • English-speaking guide • Taxes included • Prices subject to availability at booking.",
+  footerNotes: "",
 };
+
 
 /** Normalize modern colors (oklch etc.) → rgb() so html2canvas can parse */
 function normalizeColorsForCanvas(root) {
